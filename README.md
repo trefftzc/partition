@@ -47,3 +47,22 @@ If you want to find how long does the program take to execute, you can use the c
 time ./sequentialPartition < test16.txt
 
 If you observe carefully the source code of that solution, and furthermore if you profile the execution of the code, you will notice that the loop in the main function is responsible for the bulk of the execution time of the code.
+
+# OpenMP
+That loop can be parallelized using OpenMP, a standard that allows developers to parallelize programs written in C/C++ or Fortran. OpenMP is available with gcc. A parallel version of the sequential code based on OpenMP is available: openmpPartition.c Again you can compile this version of the program by typing:
+
+make openmpPartition
+
+The changes to the source code are minimal:
+1. Including the header file for the openmp library.
+2. A pragma statement that indicates to the compiler to parallelize the main loop.
+
+As with the sequential program, you can compile this version of the program by typing:
+
+make openmpPartition
+
+You can execute the program and observe the speedup by typing:
+
+time ./openmpPartition < test16.txt
+
+Computers with microprocessors with several cores are ubiquitous these days. OpenMP is available on the gcc family of compilers and on Visual Studio. Lawrence Livermore National Laboratory has an excellent tutorial on OpenMP that is available here: https://hpc-tutorials.llnl.gov/openmp/
