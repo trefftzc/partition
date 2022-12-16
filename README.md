@@ -29,3 +29,16 @@ On this repository you will find several programs that solve this problem. The i
 
 The first line contains the number of integers in the multiset, n
 The next n lines contain the n integers, one per line.
+
+The sequential version of the program is called sequentialPartition.c 
+This version works only for small instances of the problem, it will solve instances of size at most 32. 
+This version uses "brute force".
+
+There is a Makefile available that will allow you to compile the code.  You can compile the code by typing:
+make sequentialPartition
+
+You can execute the program (after compiling it) by typing:
+./sequentialPartition < test16.txt
+If you want to find how long does the program take to execute, you can use the command time as follows:
+time ./sequentialPartition < test16.txt
+If you observe carefully the source code of that solution, and furthermore if you profile the execution of the code, you will notice that the loop in the main function is responsible for the bulk of the execution time of the code.
