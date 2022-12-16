@@ -48,7 +48,7 @@ time ./sequentialPartition < test16.txt
 
 If you observe carefully the source code of that solution, and furthermore if you profile the execution of the code, you will notice that the loop in the main function is responsible for the bulk of the execution time of the code.
 
-# OpenMP
+## OpenMP
 That loop can be parallelized using OpenMP, a standard that allows developers to parallelize programs written in C/C++ or Fortran. OpenMP is available with gcc. A parallel version of the sequential code based on OpenMP is available: openmpPartition.c Again you can compile this version of the program by typing:
 
 make openmpPartition
