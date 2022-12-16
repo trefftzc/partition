@@ -35,10 +35,15 @@ This version works only for small instances of the problem, it will solve instan
 This version uses "brute force".
 
 There is a Makefile available that will allow you to compile the code.  You can compile the code by typing:
+
 make sequentialPartition
 
 You can execute the program (after compiling it) by typing:
+
 ./sequentialPartition < test16.txt
+
 If you want to find how long does the program take to execute, you can use the command time as follows:
+
 time ./sequentialPartition < test16.txt
+
 If you observe carefully the source code of that solution, and furthermore if you profile the execution of the code, you will notice that the loop in the main function is responsible for the bulk of the execution time of the code.
