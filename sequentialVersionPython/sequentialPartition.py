@@ -39,7 +39,7 @@ def printResults(value, n, array):
       print(array[i]," ")
       sum = sum + array[i]
     mask = mask * 2
-     print(" sum: \n",sum)
+  print(" sum: \n",sum)
 
 
 
@@ -65,7 +65,7 @@ if __name__ == "__main__":
   for i in range(0,n):
     print(array[i]," ") 
 		
-	print("\n")
+  print("\n")
 
   nPartitions = 1
   # Only half of all possible partitions need be examined
