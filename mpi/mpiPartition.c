@@ -145,11 +145,14 @@ int main(int argc,char *argv[]) {
   int minAllNodes;
   MPI_Reduce(&solution,&minAllNodes,1,MPI_INT,MPI_MAX,0,MPI_COMM_WORLD);
 
-  if (myRank == 0) 
-    if (minAllNodes != -1) 
+  if (myRank == 0) { 
+    if (minAllNodes != -1) {
       printResults(minAllNodes, n, array);
-    else
+    }
+    else {
       printf("No solution found.\n");
+    }
+  }
 
 
   MPI_Finalize();
